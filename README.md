@@ -56,6 +56,7 @@ EXPORT
 ```bash
 docker run -d \
 --name nfs \
+--cap-add SYS_ADMIN --cap-add DAC_READ_SEARCH \
 -v /local/export/path:/export \
 mitcdh/nfs-ganesha \
 ```
